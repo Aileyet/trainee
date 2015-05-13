@@ -1,0 +1,73 @@
+
+/*******normal input*********/
+.normal
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+    color: #808080;
+}
+.normal:hover
+{
+    border: 1px solid #d4b259;
+    background:#ffffff;
+}
+.normal:active                     /*µã»÷ÖÃ»Ò£¿*/
+{
+    border: 1px solid #d7d7d7;
+    background:#f1f1f1;
+}
+/*************correct input*****************/
+.correct
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+    color: #808080;
+}
+.correct-icon
+{
+    margin: 5px 8px 5px 0;
+}
+
+.error
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #ee5f57;
+    color: #808080;
+}
+.correct-icon
+{
+    margin: 5px 8px 5px 0;
+    padding: 1px;
+    width: 10px;
+}
+.error-mes
+{
+    color: #ee5f57;
+    margin: 5px 8px;
+}
+
+.point
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d4b259;
+    color: #808080;
+}
+.point-icon
+{
+    margin: 5px 8px 5px 0;
+    padding: 1px;
+    width: 10px;
+}
+.point-mes
+{
+    color:#d4b259;
+    margin: 5px 0;
+}

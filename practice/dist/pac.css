@@ -1,0 +1,247 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.container
+{
+    margin: 5px 0;
+    padding: 2px;
+}
+button
+{
+    margin: 5px;
+}
+/***************************normal button*************************************/
+.normal-button
+{
+    width: 76px;
+    height:24px;
+    border:1px solid #C5C5C5;
+    background-color: #ffffff;
+    color: #a5a5a5;
+}
+.normal-button:hover
+{
+    border:1px solid #949494;
+    background-color: #ffffff;
+    color: #343434;
+}
+.normal-button:active
+{
+    border:1px solid #e24a4a;
+    background-color: #e24a4a;
+    color: #ffffff;
+}
+.normal-button:visited
+{
+    border:1px solid #d9d9d9;
+    background-color: #ffffff;
+    color: #a5a5a5;
+}
+/************************************basic button************************************************/
+.basic-red
+{
+    width: 90px;
+    height:30px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: #ff4848;
+    color: #ffffff;
+}
+.basic-red:hover
+{
+    background-color: #eb4141;
+}
+.basic-red:active
+{
+    background-color: #e12e2e;
+}
+.basic-red:visited
+{
+    background-color: #ff9595;
+}
+.basic-gray
+{
+    width: 90px;
+    height:30px;
+    border: 1px;
+    border-radius: 2px;
+    background-color: #cacaca;
+    color: #202020;
+}
+.basic-gray:hover
+{
+    background-color: bebebe;
+}
+.basic-gray:active
+{
+    background-color: #aaaaaa;
+}
+.basic-gray:visited
+{
+    background-color: #dfdfdf;
+}
+/************************************************set button******************************/
+
+.basic-set
+{
+    height: 25px;
+    border: 1px solid #e0dddd;
+    background: #f6f6f6;
+    color: #3b3b3b;
+}
+.basic-set .icon
+{
+    margin: 0 4px 0 12px;
+    width: 10px;
+    height: 20px;
+    display: inline-block;
+    background-image: url("pic/s-icons.png");
+    background-position: -30px -60px;
+}
+.basic-set .text
+{
+    margin: 0 12px 0 4px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.basic-set:hover
+{
+    border: 1px solid #cdcdcd;
+    background: #eeeeee;
+    color: #3b3b3b;
+}
+.basic-set:active
+{
+    border: 1px solid #bfbfbf;
+    background: #e9e9e9;
+    color: #3b3b3b;
+}
+.basic-set:visited
+{
+    border: 1px solid #e0dddd;
+    background: #f6f6f6;
+    color: #878787;
+}
+/*********
+INPUT
+**********/
+
+
+/*******normal input*********/
+.normal-input
+{
+    margin: 5px 5px 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+    color: #808080;
+}
+.normal-input:hover
+{
+    border: 1px solid #d4b259;
+    background:#ffffff;
+}
+.disabled-input
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+    background:#f1f1f1;
+}
+/*************correct input*****************/
+.correct-input
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+    color: #808080;
+}
+.correct-icon
+{
+    margin: 5px 8px 5px 0;
+}
+
+.error-input
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #ee5f57;
+    color: #808080;
+}
+.correct-icon
+{
+    margin: 5px 8px 5px 0;
+    padding: 1px;
+    width: 10px;
+}
+.error-mes
+{
+    color: #ee5f57;
+    margin: 5px 8px;
+}
+
+.point-input
+{
+    margin: 5px 14px;
+    min-width: 200px;
+    height: 24px;
+    border: 1px solid #d4b259;
+    color: #808080;
+}
+.point-icon
+{
+    margin: 5px 8px 5px 0;
+    padding: 1px;
+    width: 10px;
+}
+.point-mes
+{
+    color:#d4b259;
+    margin: 5px 0;
+}
+
+/*******************
+CHECKBOX & RADIOBOX
+********************/
+label
+{
+    display: none;
+    margin: 5px;
+
+}
+label input
+{
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+}
+
+
+
+
+/**************
+SELECTER
+*************/
+.selectpicker
+{
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    -webkit-appearance: none;
+    appearance:none;
+    overflow: hidden;
+    display: block;
+    margin: 5px 5px 5px 14px;
+    width: 200px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
+}
+.selectpicker:hover
+{
+    border: 1px solid #f6dfa2;
+}

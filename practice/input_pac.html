@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Input Pac</title>
+    <link rel="stylesheet" href="dist/pac.css">
+</head>
+<body>
+    <div class="container">
+        <input class="normal-input" type="text" value="请输入文字" onblur="if(this.value == ''){this.value = '请输入文字'}" onfocus="if(this.value == '请输入文字' ){this.value = '';}">
+    </div>
+
+    <div class="container">
+        <input class="disabled-input" type="text" disabled="disabled">
+    </div>
+
+    <div class="container">
+            <input class="correct-input" type="text"><span class="correct-icon"></span>
+    </div>
+
+    <div class="container">
+        <input class="error-input" type="text"><span class="error-icon"></span><span class="error-mes">输入错误</span>
+    </div>
+
+    <div class="container">
+        <input class="point-input" type="text"><span class="point-icon"></span><span class="point-mes">提示信息</span>
+    </div>
+
+    <div class="container">
+        <input class="normal-input" type="text"><button class="normal-button">远程配置</button>
+    </div>
+
+
+</body>
+</html>
