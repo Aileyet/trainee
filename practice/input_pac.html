@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <title>Input Pac</title>
     <link rel="stylesheet" href="dist/pac.css">
+    <script src="dist/jquery-2.1.4.min.js"></script>
 </head>
 <body>
+<script>
+    $(document).ready(function(){
+        $(".normal-input").mouseover(function(){
+            $(".normal-input").attr('placeholder',' ');
+        });
+        $(".normal-input").mouseout(function(){
+            $(".normal-input").attr('placeholder','请输入文字');
+        });
+    });
+</script>
     <div class="container">
-        <input class="normal-input" type="text" value="请输入文字" onblur="if(this.value == ''){this.value = '请输入文字'}" onfocus="if(this.value == '请输入文字' ){this.value = '';}">
+        <input class="normal-input" type="text" placeholder="请输入文字">
     </div>
 
     <div class="container">

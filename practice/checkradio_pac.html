@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <title>CheckBox&RadioBox</title>
     <link rel="stylesheet" href="dist/pac.css">
+    <script src="dist/jquery-2.1.4.min.js"></script>
+    <script src="dist/icheck.js"></script>
+    <link rel="stylesheet" href="dist/square/blue.css">
+
 </head>
 <body>
     <form>
-        <label for="checkbox">
-            <input type="checkbox">
-        </label>
+            <input type="checkbox" >
+            <input type="checkbox" checked>
+            <input type="radio" name="iCheck">
+            <input type="radio" name="iCheck" checked>
     </form>
+    <script>
+        $(document).ready(function(){
+            $('input:checkbox').click(function () {
+                this.blur();
+                this.focus();
+            });
+        });
+    </script>
+
+    <script>
+            $(document).ready(function(){
+                $('input').iCheck({
+                    checkboxClass:'icheckbox_square_blue',
+                    radioClass:'iradio_square_blue',
+                    increaseArea:'20%'
+                });
+            });
+    </script>
+
 </body>
 </html>
