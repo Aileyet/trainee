@@ -1,0 +1,144 @@
+/************
+css style resrt
+************
+*************clear stylesheet already exited**********/
+
+html,
+body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,abbr,blockquote,del
+,em,img,strong,
+dl,dt,dd,ol,ul,li,form,label,table,caption,
+tbody,tfoot,thead,
+tr,th,td,figcaption,footer,header,hgroup,
+nav,a, menu,output,section,
+audio,video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    background-color: transparent;
+}
+
+ol,ul
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+/****************
+change the stylesheet to suit your need
+*********************/
+
+/**********input***********/
+input
+{
+    border: 1px;
+    padding: 0px;
+    margin: 10px 15px;
+    display: inline-block;
+}
+button
+{
+    width: 90px;
+    height: 30px;
+    border-radius: 2px;
+}
+.red-button
+{
+    background: #ff4848;
+    color: #ffffff;
+}
+.red-button:hover
+{
+    background: #eb4141;
+}
+.red-button:active
+{
+    background: #e12e2e;
+}
+.red-button:disabled
+{
+    background: #ff9595;
+}
+.gray-button
+{
+    background: #cacaca;
+    color: #4e4e4e;
+}
+.gray-button:hover
+{
+    background: #bebebe;
+}
+.gray-button:active
+{
+    background:#AAAAAA;
+}
+.gray-button:disabled
+{
+    background: #dfdfdf;
+}
+input[type="submit"]
+{
+    width: 76px;
+    height: 24px;
+    font: inherit;
+    font-size: 15px;
+    color: #4e4e4e;
+    border: 1px solid #C5C5C5 ;
+    background-color: #FFFFFF;
+}
+input[type="submit"]:hover
+{
+    color: #343434;
+    border-color: #949494;
+}
+input[type="submit"]:active
+{
+    color: #FFFFFF;
+    border-color: #e24a4a;
+    background-color: #e24a4a;
+}
+input[type="submit"]:disabled
+{
+    color: #a5a5a5;
+    border-color: #d9d9d9;
+    background-color: #FFFFFF;
+}
+input[type="checkbox"],
+input[type="radiobox"]
+{
+    border: 1px solid #b5b5b5 ;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="text"]
+{
+    width: 200px;
+    height: 24px;
+    border: 1px solid #b5b5b5 ;
+}
+input[type="text"]:hover
+{
+    border-color: #d4b259;
+}
+input[type="text"]:disabled
+{
+    border-color: #d7d7d7;
+    background-color: #f1f1f1;
+}
+.input-error
+{
+    border-color: #ee5f57;
+    color: #ee5f57;
+}
+.input-warning
+{
+    border-color: #d4b259;
+    color: #d4b259;
+}

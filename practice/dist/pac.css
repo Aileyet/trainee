@@ -72,7 +72,7 @@ button
 }
 .basic-gray:hover
 {
-    background-color: bebebe;
+    background-color: #bebebe;
 }
 .basic-gray:active
 {
@@ -97,7 +97,7 @@ button
     width: 10px;
     height: 20px;
     display: inline-block;
-    background-image: url("pic/s-icons.png");
+    background-image: url("../pic/s-icons.png");
     background-position: -30px -60px;
 }
 .basic-set .text
@@ -209,61 +209,182 @@ INPUT
 /*******************
 CHECKBOX & RADIOBOX
 ********************/
-input[type="checkbox"]
+.checkbox-wrap,.radiobox-wrap
 {
-    -webkit-appearance:none;
+    margin: 10px;
+    padding: 10px;
+}
+.check-box,.dis-check-box,.unchecked-radiobox-circle,.checked-radiobox-circle
+{
+    float:left;
+    width: 10px;
+    height: 10px;
     border: 1px solid #b5b5b5;
-    color: #3668b0;
-    width: 12px;
-    height: 12px;
-    vertical-align: middle;
+    margin: 2px 5px;
 }
-input[type="checkbox"]:hover
+.dis-hook,.dis-square
 {
-    color: #000;
+    color: #a5a5a5;
 }
 
-
+.dis-check-box
+{
+    border:1px solid #d7d7d7;
+    background-color: #f1f1f1;
+}
+.check-box:hover
+{
+    border: 1px solid #3668b0;
+}
+.hook,.dis-hook
+{
+}
+.square,.dis-square
+{
+    width: 0;
+    height: 0;
+    border: 2px solid;
+    margin:3px;
+}
+.expansion,.collapse
+{
+    float:left;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #b5b5b5;
+    margin: 2px 5px;
+}
+.plus-icon,.minus-icon
+{
+    width: 5px;
+    height: 5px;
+    margin: 2px;
+}
+.collapse:hover,.expansion:hover
+{
+    background-color: #b5b5b5;
+    color: #ffffff;
+}
+.checkbox-wrap hr
+{
+    position: relative;
+    top: 2px;
+}
+.vertical-line
+{
+    width: 1px;
+    height: 5px;
+    background-color: #d5d5d5;
+    position: relative;
+    left: 2px;
+    top: -1px;
+}
+.dis-collapse,.dis-expansion
+{
+    float:left;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #d7d7d7;
+    background-color: #f1f1f1;
+    margin: 2px 5px;
+}
+.checked-radiobox-circle,.unchecked-radiobox-circle
+{
+    border-radius: 6px;
+}
+.checked-radiobox-circle:hover,.unchecked-radiobox-circle:hover
+{
+    background-color: #e2e9f4;
+    border-color: #3668b0;
+}
+.radiobox-point
+{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #d9edf7;
+    border-radius: 4px;
+    background-color:#3668b0;
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
 
 
 
 /**************
 SELECTER
 *************/
-.selectpicker
+.select
 {
-    -ms-progress-appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    overflow: hidden;
-    display: block;
-    margin: 5px 5px 5px 14px;
+    margin: 10px;
+}
+.select-wrap,.dis-select-wrap
+{
     width: 200px;
     height: 24px;
     border: 1px solid #d7d7d7;
 }
-.selectpicker:hover
+
+.select-simulate,.dis-select-simulate
 {
-    border: 1px solid #f6dfa2;
+    float: left;
+    width: 178px;
+    height: 24px;
+    border: transparent;
+    outline: medium;
 }
-.selectpicker .triangle
+.drop-down,.dis-drop-down
 {
+    float: left;
     width: 20px;
     height: 20px;
-    padding: 2px;
-    background: #f3f3f3;
+    margin: 2px 1px;
 }
-
-.calendar
+.triangle,.dis-triangle
 {
-    margin: 5px 5px 5px 14px;
-    width: 200px;
-    height: 24px;
-    border: 1px solid #d7d7d7;
-    background: url("pic/s-icons.png") no-repeat;
-    background-position: (100,100);
+    border:3px solid;
+    width: 0;
+    height: 0;
+    border-bottom-color:transparent ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    margin:8.5px auto;
 }
-
+.option-wrap
+{
+    width: 200px;
+    min-height:100px;
+    border: 1px solid #C5C5C5;
+    border-top-style: hidden;
+    z-index: -1;
+}
+dd
+{
+    vertical-align: middle;
+    height:24px;
+    display:block;
+}
+dd:hover
+{
+    margin: 0 1px;
+    background-color: #f6dfa2;
+}
+dd p
+{
+    font-size: small;
+    position: relative;
+    top: 5px;
+    left: 8px;
+}
+.dis-select-wrap
+{
+    background-color: #d7d7d7;
+}
+.dis-select-simulate
+{
+    background-color: #d7d7d7;
+    color: #d2d2d2;
+}
 /**************
 SEARCH
 ******************/
@@ -273,13 +394,13 @@ SEARCH
     min-width: 200px;
     height: 24px;
     border: 1px solid #d7d7d7;
-    background: url("pic/s-icons.png");
 }
 .disable-search
 {
-    background: url("pic/s-icons.png") no-repeat 20px 20px;
-    -moz-background-size: 18px 18px;
-    background-position: (-120px,-60px);
+    background: url("../pic/s-icons.png") no-repeat -100px -100px ;
+    position: relative;
+    top: 0;
+    right: 2px;
     margin: 5px 5px 5px 14px;
     min-width: 200px;
     height: 24px;
@@ -289,38 +410,33 @@ SEARCH
 {
     width: 200px;
     height: 30px;
-    border: 1px solod #7d7d7d;
+    border: 1px solid #7d7d7d;
 }
 .imitate-border input
 {
     border: none;
 }
-
-/********************
-FLOATE WINDOW
-***********************/
+/**************
+FLOAT WINDOW
+***************/
 .float-window
 {
+    height:86px;
     min-width: 200px;
-    height: 86px;
+    display:inline-block;
     border: 1px solid #c8c8c8;
-    border-radius: 10px;
-    display: inline-flex;
+    border-radius: 5px;
 }
 .float-icon
 {
-    background: url("pic/s-icons.png");
-    background-repeat: no-repeat;
-    background-position: -100px,-80px;
-    padding: 0 10px;
+    float: left;
     width: 20px;
-    height: 30px;
-    float:left;
+    height: 20px;
+    background: url("../pic/s-icons.png") no-repeat -100px -100px;
     margin: 24px 17px 24px 29px;
 }
 .float-text
 {
-    float:left;
-    margin: 31px 29px 31px 0px;
-    color: #525252;
+    margin: 34px 29px 34px 0px;
+    float: left;
 }

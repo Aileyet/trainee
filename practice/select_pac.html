@@ -1,26 +1,56 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>select box</title>
     <link rel="stylesheet" href="dist/pac.css">
-    <link rel="stylesheet" type="text/css" href="tcal.css" />
-    <script type="text/javascript" src="tcal.js"></script>
-
+    <script src="dist/jquery-2.1.4.min.js"></script>
 </head>
 <body>
-<form>
-    <a class="btn-select">
-        <select class="selectpicker" >
-            <a class="triangle"></a>
-            <option>DS-B20系列</option>
-            <option>DS-B20系列</option>
-            <option>DS-B20系列</option>
-        </select>
-    </a>
-<form>
-    <div><input type="text" class="calendar"/></div>
-</form>
+<script>
+    $(document).ready(function(){
+        $(".select-wrap,.option-wrap").mouseenter(function(){
+            $(".select-wrap").css('border','1px solid #d4b259');
+            $(".drop-down").css('background','#f3f3f3');
+        });
+        $(".select-wrap,.option-wrap").mouseleave(function(){
+            $(".select-wrap").css('border','1px solid #d7d7d7');
+            $(".drop-down").css('background','#ffffff');
+        });
+        $(".select-wrap").click(function(){
+            $(".option-wrap").toggle();
+        });
+        $("dd").click(function() {
+            $('.select-simulate').val($(this).text());
+        });
+    });
+</script>
+<div class="select">
+    <div class="select-wrap">
+        <input class="select-simulate" type="text">
+        <div class="drop-down">
+            <div class="triangle"></div>
+        </div>
+    </div>
+    <div class="option-wrap" hidden="hidden">
+        <div class="option-simulate">
+            <dl>
+                <dd><p>BS-B20系列</p></dd>
+                <dd><p>BS-B21系列</p></dd>
+                <dd><p>BS-B22系列</p></dd>
+                <dd><p>BS-B23系列</p></dd>
+                <dd><p>BS-B24系列</p></dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="select">
+    <div class="dis-select-wrap" disabled="disabled"  >
+        <input class="dis-select-simulate" type="text" placeholder="BS-B20系列" readonly="true"></input>
+        <div class="dis-drop-down">
+            <div class="dis-triangle"></div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
-

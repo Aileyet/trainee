@@ -5,35 +5,91 @@
     <title>CheckBox&RadioBox</title>
     <link rel="stylesheet" href="dist/pac.css">
     <script src="dist/jquery-2.1.4.min.js"></script>
-    <script src="dist/icheck.js"></script>
-    <link rel="stylesheet" href="dist/square/blue.css">
-
 </head>
 <body>
-    <form>
-            <input type="checkbox" >
-            <input type="checkbox" checked>
-            <input type="radio" name="iCheck">
-            <input type="radio" name="iCheck" checked>
-    </form>
-    <script>
-        $(document).ready(function(){
-            $('input:checkbox').click(function () {
-                this.blur();
-                this.focus();
-            });
+<script>
+    $(document).ready(function(){
+        $(".check-box").click(function(){
+            $(".check-box").css('background-color','#e2e9f4');
         });
-    </script>
+        $(".check-box").mouseleave(function(){
+            $(".check-box").css('background-color','#ffffff');
+        });
+        $(".check-box").mouseenter(function(){
+            $(".check-box").css('background-color','#e2e9f4');
+        });
+        $(".unchecked-radiobox-circle,.checked-radiobox-circle").mouseleave(function(){
+            $(".unchecked-radiobox-circle").css('background-color','#ffffff');
+            $(".checked-radiobox-circle").css('background-color','#ffffff');
+        });
+        $(".unchecked-radiobox-circle").mouseenter(function(){
+            $(".unchecked-radiobox-circle").css('background-color','#e2e9f4');
+        });
+        $(".checked-radiobox-circle").mouseenter(function(){
+            $(".checked-radiobox-circle").css('background-color','#e2e9f4');
+        })
+        $(".unchecked-radiobox-circle,.checked-radiobox-circle").click(function(){
+            $(".unchecked-radiobox-circle,.checked-radiobox-circle").css('background-color','#e2e9f4');
+        });
 
-    <script>
-            $(document).ready(function(){
-                $('input').iCheck({
-                    checkboxClass:'icheckbox_square_blue',
-                    radioClass:'iradio_square_blue',
-                    increaseArea:'20%'
-                });
-            });
+    });
+</script>
+<div class="checkbox-wrap">
+    <div class="check-box"></div>
+    <div class="check-box">
+        <div class="hook"></div>
+    </div>
+    <div class="check-box">
+        <div class="square"></div>
+    </div>
+</div>
 
-    </script>
+<div class="checkbox-wrap">
+    <div class="dis-check-box"></div>
+    <div class="dis-check-box">
+        <div class="dis-hook"></div>
+    </div>
+    <div class="dis-check-box">
+        <div class="dis-square"></div>
+    </div>
+</div>
+
+<div class="checkbox-wrap">
+    <div class="collapse">
+        <div class="plus-icon">
+            <hr size="1" color="#d5d5d5">
+            <div class="vertical-line"></div>
+        </div>
+    </div>
+    <div class="expansion">
+        <div class="minus-icon">
+            <hr size="1" color="#d5d5d5">
+        </div>
+    </div>
+</div>
+
+<div class="checkbox-wrap">
+    <div class="dis-collapse">
+        <div class="plus-icon">
+            <hr size="1" color="#d5d5d5">
+            <div class="vertical-line"></div>
+        </div>
+    </div>
+    <div class="dis-expansion">
+        <div class="minus-icon">
+            <hr size="1" color="#d5d5d5">
+        </div>
+    </div>
+</div>
+
+
+<div class="radiobox-wrap">
+    <div class="unchecked-radiobox-circle"></div>
+    <div class="checked-radiobox-circle">
+        <div class="radiobox-point"></div>
+    </div>
+</div>
+
+
 </body>
 </html>
