@@ -36,6 +36,10 @@ change the stylesheet to suit your need
 /**********input***********/
 input
 {
+    -moz-appearance: none;            /*firefox*/
+    -webkit-appearance:none;         /*chrome & safari*/
+    appearance:none;                   /**ie*/
+    overflow: hidden;                  /*hidde the triangle*/
     border: 1px;
     padding: 0px;
     margin: 10px 15px;
@@ -117,7 +121,7 @@ input[type="radiobox"]
     box-sizing: border-box;
     padding: 0;
 }
-input[type="text"]
+input[type="text"],input[type="search"]
 {
     width: 200px;
     height: 24px;
@@ -142,3 +146,8 @@ input[type="text"]:disabled
     border-color: #d4b259;
     color: #d4b259;
 }
+input[type="search"]
+{
+   background: url("../pic/s-icons.png") content-box -100px -100px;
+}
+
