@@ -430,8 +430,8 @@ FLOAT WINDOW
 .float-icon
 {
     float: left;
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     background: url("../pic/s-icons.png") no-repeat -100px -100px;
     margin: 24px 17px 24px 29px;
 }

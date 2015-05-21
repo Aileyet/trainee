@@ -1,5 +1,5 @@
 /************
-css style resrt
+css style reset
 ************
 *************clear stylesheet already exited**********/
 
@@ -10,7 +10,7 @@ dl,dt,dd,ol,ul,li,form,label,table,caption,
 tbody,tfoot,thead,
 tr,th,td,figcaption,footer,header,hgroup,
 nav,a, menu,output,section,
-audio,video
+audio,video,button,select,option
 {
     margin: 0;
     padding: 0;
@@ -19,8 +19,8 @@ audio,video
     font: inherit;
     vertical-align: baseline;
     background-color: transparent;
+    outline: none;
 }
-
 ol,ul
 {
     list-style: none;
@@ -33,18 +33,7 @@ a
 change the stylesheet to suit your need
 *********************/
 
-/**********input***********/
-input
-{
-    -moz-appearance: none;            /*firefox*/
-    -webkit-appearance:none;         /*chrome & safari*/
-    appearance:none;                   /**ie*/
-    overflow: hidden;                  /*hidde the triangle*/
-    border: 1px;
-    padding: 0px;
-    margin: 10px 15px;
-    display: inline-block;
-}
+/**********button***********/
 button
 {
     width: 90px;
@@ -85,6 +74,20 @@ button
 {
     background: #dfdfdf;
 }
+
+/**********INPUT CLEAR**************/
+input,select
+{
+    -moz-appearance: none;            /*firefox*/
+    -webkit-appearance:none;         /*chrome & safari*/
+    appearance:none;                   /**ie*/
+    overflow: hidden;                  /*hidde the triangle*/
+    outline: none;
+    padding: 0px;
+    display: inline-block;
+    border: 1px solid;
+}
+/***************DEFINE YOUR SUBMIT******************/
 input[type="submit"]
 {
     width: 76px;
@@ -92,7 +95,7 @@ input[type="submit"]
     font: inherit;
     font-size: 15px;
     color: #4e4e4e;
-    border: 1px solid #C5C5C5 ;
+    border-color:  #C5C5C5 ;
     background-color: #FFFFFF;
 }
 input[type="submit"]:hover
@@ -112,42 +115,263 @@ input[type="submit"]:disabled
     border-color: #d9d9d9;
     background-color: #FFFFFF;
 }
-input[type="checkbox"],
-input[type="radiobox"]
+/************DEFINE YOUR CHECKBOX & RADIO****************/
+input[type="checkbox"]
 {
-    border: 1px solid #b5b5b5 ;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-color: #3668b0;
 }
-input[type="text"],input[type="search"]
+input[type="checkbox"]:hover
 {
-    width: 200px;
-    height: 24px;
-    border: 1px solid #b5b5b5 ;
+    background: #e2e9f4;
 }
-input[type="text"]:hover
+input[type="checkbox"]:checked
 {
-    border-color: #d4b259;
+    border: 3px solid #d5d5d5;
+    outline: 1px solid #3668b0;
+    background: #3668b0;
 }
-input[type="text"]:disabled
+input[type="checkbox"]:disabled
+{
+    border-color: #f1f1f1;
+    background-color: #d7d7d7;
+    outline: 1px solid #d7d7d7;
+}
+input[type="radio"]
+{
+    width: 12px;
+    height: 12px;
+    border-color:#b5b5b5 ;
+    border-radius: 6px;
+}
+input[type="radio"]:hover
+{
+    border-color: #3668b0;
+}
+input[type="radio"]:active
+{
+    background-color: #e2e9f4;
+}
+input[type="radio"]:checked
+{
+    box-shadow: inset 0.5px 0.8px 1px 2px #e2e9f4;       /**********机z智如我，hack画法画radio选中样式*************/
+    background-color: #3668b0;
+    border-color: #3668b0;
+}
+input[type="radio"]:disabled
+{
+    border-color: #d7d7d7;
+    box-shadow: inset 0.5px 0.8px 1px 2px #f1f1f1;
+    background-color: #d5d5d5;
+}
+.collapse[aria-disabled]
 {
     border-color: #d7d7d7;
     background-color: #f1f1f1;
 }
+.expansion,.collapse
+{
+    float:left;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #b5b5b5;
+    margin: 2px 5px;
+}
+.plus-icon,.minus-icon
+{
+    width: 5px;
+    height: 5px;
+    margin: 2px;
+}
+.collapse:hover,.expansion:hover
+{
+    background-color: #b5b5b5;
+    color: #ffffff;
+}
+.collapse hr,.expansion hr
+{
+    position: relative;
+    top: -4px;
+}
+.vertical-line
+{
+    width: 1px;
+    height: 5px;
+    background-color: #d5d5d5;
+    position: relative;
+    left: 2px;
+    top: -15px;
+}
+
+
+/****************DEFINE YOUR TEXT INPUT************************/
+input[type="text"]:not(.input-error):not(.input-warning),select
+{
+    width: 198px;
+    height: 22px;
+    border: 1px solid #b5b5b5 ;
+}
+input[type="text"]:not(.input-error):not(.input-warning):not(.input-correct):hover
+{
+    border-color: #d4b259;
+}
+input[type="text"]:not(.input-error):not(.input-warning):disabled
+{
+    border-color: #d7d7d7;
+    background-color: #f1f1f1;
+}
+.icon-input
+{
+    margin: 5px 0;
+    width: 198px;
+    height: 22px;
+    border-color: #d7d7d7;
+    margin-right: 14px;
+}
+.message-icon
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background: url("../pic/s-icons.png");
+    background-position: -8px -120px;
+    position: relative;
+    top:-28px;
+    left: 214px;
+}
+.message-text
+{
+    position: relative;
+    left: 242px;
+    top: -45px;
+}
 .input-error
 {
-    border-color: #ee5f57;
+    width: 198px;
+    height: 22px;
     color: #ee5f57;
+    border-color: #ee5f57;
+    margin-right: 14px;
 }
 .input-warning
 {
+    width: 198px;
+    height: 22px;
     border-color: #d4b259;
     color: #d4b259;
 }
-input[type="search"]
+
+
+/**********SELECTOR**************/
+.select-imitate
 {
-   background: url("../pic/s-icons.png") content-box -100px -100px;
+    width:198px;
+    height: 22px;
+    border: 1px solid #C5C5C5;
+}
+.select-imitate:hover
+{
+    border-color: #d4b259;
+}
+.select-imitate-input
+{
+    float: left;
+    width: 178px;
+    height: 22px;
+}
+.select-triangle
+{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    border-top: 4px solid ;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.dropdown-menu
+{
+    border:1px solid #C5C5C5;
+    border-top: hidden;
+    width: 198px;
+    min-height:100px ;
+}
+.dropdown-menu>ul>li
+{
+    height: 21px;
+    padding-top: 3px;
+    padding-left: 5px;
+    margin: 0 1px;
+}
+.dropdown-menu>ul>li:hover
+{
+    background: #f6dfa2;
 }
 
+/**********SEARCH INPUT********************/
+.ui-icon-input
+{
+    width:198px;
+    height: 22px;
+    border: 1px solid #C5C5C5;
+    margin: 2px 0;
+}
+.ui-icon-input:hover
+{
+    border-color: #d4b259;
+}
+input[type="search"]
+{
+    float: left;
+    width: 176px;
+    height: 22px;
+    border: none ;
+}
+.search-icon
+{
+    width: 22px;
+    height: 22px;
+    position: relative;
+    left: 178px;
+    background: url("../pic/s-icons.png");
+    background-position: -345px -233px;
+    color: #9b9b9b;
+}
+.ui-icon-input:hover
+{
+    border-color: #d4b259;
+}
+.ui-icon-input:disabled
+{
+    border-color: #d7d7d7;
+    background: #f1f1f1;
+}
+/********FLOAT WINDOW**********/
+.float-window
+{
+    display: inline-block;
+    min-width: 10%;
+    height: 86px;
+    border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+.float-icon
+{
+    float: left;
+    margin: 24px 17px 24px 29px;
+    width: 38px;
+    height: 38px;
+    background: url("../pic/s-icons.png") no-repeat;
+    background-position: 0 -112px;
+}
+.float-text
+{
+    float: left;
+    margin-right: 29px;
+    position: relative;
+    top: 38%;
+}
+@media handheld and (max-width: 240px) {
+    input{font-size:small;}
+}
