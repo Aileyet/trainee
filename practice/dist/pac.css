@@ -331,7 +331,6 @@ SELECTER
     width: 178px;
     height: 24px;
     border: transparent;
-    outline: medium;
 }
 .drop-down,.dis-drop-down
 {
@@ -440,3 +439,4 @@ FLOAT WINDOW
     margin: 34px 29px 34px 0px;
     float: left;
 }
+

@@ -10,7 +10,7 @@ dl,dt,dd,ol,ul,li,form,label,table,caption,
 tbody,tfoot,thead,
 tr,th,td,figcaption,footer,header,hgroup,
 nav,a, menu,output,section,
-audio,video,button,select,option
+audio,video,button,select,option,input
 {
     margin: 0;
     padding: 0;
@@ -20,6 +20,7 @@ audio,video,button,select,option
     vertical-align: baseline;
     background-color: transparent;
     outline: none;
+    vertical-align: baseline;
 }
 ol,ul
 {
@@ -78,14 +79,17 @@ button
 /**********INPUT CLEAR**************/
 input,select
 {
+    appearance:none;                   /**ie*/
     -moz-appearance: none;            /*firefox*/
     -webkit-appearance:none;         /*chrome & safari*/
-    appearance:none;                   /**ie*/
     overflow: hidden;                  /*hidde the triangle*/
     outline: none;
     padding: 0px;
     display: inline-block;
     border: 1px solid;
+    -moz-box-pack:center;
+    -moz-box-align: center;
+
 }
 /***************DEFINE YOUR SUBMIT******************/
 input[type="submit"]
@@ -118,8 +122,8 @@ input[type="submit"]:disabled
 /************DEFINE YOUR CHECKBOX & RADIO****************/
 input[type="checkbox"]
 {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-color: #3668b0;
 }
 input[type="checkbox"]:hover
@@ -128,9 +132,13 @@ input[type="checkbox"]:hover
 }
 input[type="checkbox"]:checked
 {
+    width: 10px;
+    height: 10px;
     border: 3px solid #d5d5d5;
     outline: 1px solid #3668b0;
     background: #3668b0;
+    position: relative;
+    top: -1px;
 }
 input[type="checkbox"]:disabled
 {
@@ -165,16 +173,11 @@ input[type="radio"]:disabled
     box-shadow: inset 0.5px 0.8px 1px 2px #f1f1f1;
     background-color: #d5d5d5;
 }
-.collapse[aria-disabled]
-{
-    border-color: #d7d7d7;
-    background-color: #f1f1f1;
-}
 .expansion,.collapse
 {
     float:left;
-    width: 9px;
-    height: 9px;
+    width:9px;
+    height:9px;
     border: 1px solid #b5b5b5;
     margin: 2px 5px;
 }
@@ -206,11 +209,12 @@ input[type="radio"]:disabled
 
 
 /****************DEFINE YOUR TEXT INPUT************************/
+
 input[type="text"]:not(.input-error):not(.input-warning),select
 {
     width: 198px;
     height: 22px;
-    border: 1px solid #b5b5b5 ;
+    border: 1px solid #b5b5b5;
 }
 input[type="text"]:not(.input-error):not(.input-warning):not(.input-correct):hover
 {
@@ -221,7 +225,7 @@ input[type="text"]:not(.input-error):not(.input-warning):disabled
     border-color: #d7d7d7;
     background-color: #f1f1f1;
 }
-.icon-input
+.icon-input-correct,.icon-input-error,.icon-input-warning
 {
     margin: 5px 0;
     width: 198px;
@@ -231,21 +235,32 @@ input[type="text"]:not(.input-error):not(.input-warning):disabled
 }
 .message-icon
 {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     margin-right: 8px;
-    background: url("../pic/s-icons.png");
-    background-position: -8px -120px;
+    background: url("../pic/s-icons.png") no-repeat;
+    background-position: -13px -125px;
     position: relative;
-    top:-28px;
+    top:-20px;
     left: 214px;
 }
-.message-text
+.icon-input-error .message-text
 {
     position: relative;
-    left: 242px;
-    top: -45px;
+    color: #ee5f57;
+    left: 236px;
+    top: -36px;
+    font-size: 14px;
 }
+.icon-input-warning .message-text
+{
+    position: relative;
+    color: #d4b259;
+    left: 236px;
+    top: -36px;
+    font-size:14px;
+}
+
 .input-error
 {
     width: 198px;
@@ -264,51 +279,76 @@ input[type="text"]:not(.input-error):not(.input-warning):disabled
 
 
 /**********SELECTOR**************/
-.select-imitate
+.select-wrap,.dis-select-wrap
 {
-    width:198px;
-    height: 22px;
-    border: 1px solid #C5C5C5;
+    width: 198px;
+    height: 24px;
+    border: 1px solid #d7d7d7;
 }
-.select-imitate:hover
-{
-    border-color: #d4b259;
-}
-.select-imitate-input
+
+.select-simulate,.dis-select-simulate
 {
     float: left;
     width: 178px;
-    height: 22px;
+    height: 24px;
+    border: transparent;
+    outline: medium;
 }
-.select-triangle
+.drop-down,.dis-drop-down
 {
-    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 2px 1px;
+    position: relative;
+    left: 176px;
+}
+.triangle,.dis-triangle
+{
+    border:3px solid;
     width: 0;
     height: 0;
-    margin-left: 6px;
-    border-top: 4px solid ;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
+    border-bottom-color:transparent ;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    top: 8.5px;
+    left: 7.5px;
 }
-.dropdown-menu
+.option-wrap
 {
-    border:1px solid #C5C5C5;
-    border-top: hidden;
     width: 198px;
-    min-height:100px ;
+    min-height:198px;
+    border: 1px solid #C5C5C5;
+    border-top-style: hidden;
+    z-index: -1;
 }
-.dropdown-menu>ul>li
+dd
 {
-    height: 21px;
-    padding-top: 3px;
-    padding-left: 5px;
+    vertical-align: middle;
+    height:24px;
+    display:block;
+}
+dd:hover
+{
     margin: 0 1px;
+    background-color: #f6dfa2;
 }
-.dropdown-menu>ul>li:hover
+dd p
 {
-    background: #f6dfa2;
+    font-size: small;
+    position: relative;
+    top: 5px;
+    left: 8px;
 }
-
+.dis-select-wrap
+{
+    background-color: #d7d7d7;
+}
+.dis-select-simulate
+{
+    background-color: #d7d7d7;
+    color: #d2d2d2;
+}
 /**********SEARCH INPUT********************/
 .ui-icon-input
 {
@@ -334,9 +374,9 @@ input[type="search"]
     height: 22px;
     position: relative;
     left: 178px;
+    z-index: -1;
     background: url("../pic/s-icons.png");
     background-position: -345px -233px;
-    color: #9b9b9b;
 }
 .ui-icon-input:hover
 {

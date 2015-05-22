@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=8">
     <title>test the reset-css</title>
     <link rel="stylesheet" href="dist/reset.css">
+    <script src="dist/jquery-2.1.4.min.js"></script>
 </head>
 <body>
     <button class="red-button">保存</button>
@@ -23,13 +25,13 @@
     <input type="radio" checked="checked" disabled="disabled">
 
 
-    <div class="collapse" aria-disabled="true">
+    <div type="color" class="collapse" aria-disabled="true">
         <div class="plus-icon">
             <hr size="1" color="#d5d5d5">
             <div class="vertical-line"></div>
         </div>
     </div>
-    <div class="expansion">
+    <div type="color" class="expansion">
         <div class="minus-icon">
             <hr size="1" color="#d5d5d5">
         </div>
@@ -38,14 +40,14 @@
 
     <input type="text" placeholder="please enter...">
     <input type="text" disabled="disabled">
-    <div class="icon-input">
-        <input type="text" class="input-correct"> <div class="message-icon"></div><span class="message-text">输入正确</span>
+    <div class="icon-input-correct">
+        <input type="text" class="input-correct"> <div class="message-icon"></div>
     </div>
-    <div class="icon-input">
-        <input type="text" class="input-error"> <div class="message-icon"></div><div class="message-text"></div>
+    <div class="icon-input-error">
+        <input type="text" class="input-error"> <div class="message-icon"></div><div class="message-text">输入错误</div>
     </div>
-    <div class="icon-input">
-        <input type="text" class="input-warning">
+    <div class="icon-input-warning">
+        <input type="text" class="input-warning"><div class="message-icon"></div><div class="message-text">警告信息</div>
     </div>
 
     <div class="ui-icon-input">
@@ -57,7 +59,7 @@
 
 
     <!--select imitation-->
-    <div class="select-imitate">
+    <!-- class="select-imitate">
         <div class="select-imitate-input"></div>
         <div class="select-triangle"></div>
     </div>
@@ -67,6 +69,44 @@
             <li>1</li>
             <li>2</li>
         </ul>
+    </div-->
+
+    <script>
+        $(document).ready(function(){
+            $(".select-wrap,.option-wrap").mouseenter(function(){
+                $(".select-wrap").css('border','1px solid #d4b259');
+                $(".drop-down").css('background','#f3f3f3');
+            });
+            $(".select-wrap,.option-wrap").mouseleave(function(){
+                $(".select-wrap").css('border','1px solid #d7d7d7');
+                $(".drop-down").css('background','#ffffff');
+            });
+            $(".select-wrap").click(function(){
+                $(".option-wrap").toggle();
+            });
+            $("dd").click(function() {
+                $('.select-simulate').val($(this).text());
+            });
+        });
+    </script>
+    <div class="select">
+        <div class="select-wrap">
+            <input class="select-simulate" type="text">
+            <div class="drop-down">
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <div class="option-wrap" hidden="hidden">
+            <div class="option-simulate">
+                <dl>
+                    <dd><p>BS-B20系列</p></dd>
+                    <dd><p>BS-B21系列</p></dd>
+                    <dd><p>BS-B22系列</p></dd>
+                    <dd><p>BS-B23系列</p></dd>
+                    <dd><p>BS-B24系列</p></dd>
+                </dl>
+            </div>
+        </div>
     </div>
 
     <div class="float-window">
