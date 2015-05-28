@@ -15,12 +15,21 @@ audio,video,button,select,option,input
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 50%;
     font: inherit;
     vertical-align: baseline;
     background-color: transparent;
     outline: none;
     vertical-align: baseline;
+}
+body
+{
+    margin-left: 10px;
+}
+h3
+{
+    margin-top: 10px;
+    font-size: larger;
 }
 ol,ul
 {
@@ -35,7 +44,7 @@ change the stylesheet to suit your need
 *********************/
 
 /**********button***********/
-button
+.red-button,.gray-button
 {
     width: 90px;
     height: 30px;
@@ -75,7 +84,43 @@ button
 {
     background: #dfdfdf;
 }
-
+.set-button
+{
+    height: 25px;
+    display: inline-block;
+    min-width: 5%;
+    border:1px solid #e0dddd;
+    font-size:small;
+    font-weight: bold;
+    color: #3b3b3b;
+    background-color: #f6f6f6;
+}
+.set-button:hover
+{
+    border-color: #cdcdcd;
+    background-color: #eeeeee;
+}
+.set-button:active
+{
+    border-color: #bfbfbf;
+    background-color: #e9e9e9;
+}
+.set-button:disabled
+{
+    border-color: #e0dddd;
+    background-color: #f6f6f6;
+    color: #878787;
+}
+.set-button i
+{
+    padding: 2px 8px;
+    margin: 5px 0px 5px 12px;
+    background: url("../pic/icons.png") -118px -110px;
+}
+.set-button .mes
+{
+    margin: 0px 12px 0px 8px;
+}
 /**********INPUT CLEAR**************/
 input,select
 {
@@ -87,9 +132,6 @@ input,select
     padding: 0px;
     display: inline-block;
     border: 1px solid;
-    -moz-box-pack:center;
-    -moz-box-align: center;
-
 }
 /***************DEFINE YOUR SUBMIT******************/
 input[type="submit"]
@@ -120,58 +162,100 @@ input[type="submit"]:disabled
     background-color: #FFFFFF;
 }
 /************DEFINE YOUR CHECKBOX & RADIO****************/
-input[type="checkbox"]
+.blank-check:not(:disabled)
 {
     width: 12px;
     height: 12px;
-    border-color: #3668b0;
+    border: none;
+    background: url("../pic/icons.png") no-repeat  -216px -40px;
 }
-input[type="checkbox"]:hover
+.blank-check:not(:disabled):hover
 {
-    background: #e2e9f4;
+    background: url("../pic/icons.png") no-repeat -238px -40px;
 }
-input[type="checkbox"]:checked
+.blank-check:not(:disabled):checked
 {
-    width: 10px;
-    height: 10px;
-    border: 3px solid #d5d5d5;
-    outline: 1px solid #3668b0;
-    background: #3668b0;
-    position: relative;
-    top: -1px;
+    background: url("../pic/icons.png") no-repeat -260px -40px;
 }
-input[type="checkbox"]:disabled
-{
-    border-color: #f1f1f1;
-    background-color: #d7d7d7;
-    outline: 1px solid #d7d7d7;
-}
-input[type="radio"]
+.blank-check:disabled
 {
     width: 12px;
     height: 12px;
-    border-color:#b5b5b5 ;
+    border:1px solid #d7d7d7;
+    background-color: #f1f1f1;
+}
+.hook-check:not(:disabled)
+{
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url("../pic/icons.png") no-repeat -304px -40px;
+}
+.hook-check:not(:disabled):hover
+{
+    background: url("../pic/icons.png") no-repeat -326px -40px;
+}
+.hook-check:not(:disabled):checked
+{
+    background: url("../pic/icons.png") no-repeat -348px -40px;
+}
+.hook-check:disabled
+{
+    width: 12px;
+    height: 12px;
+    border:1px solid #d7d7d7;
+    background-color: #f1f1f1;
+}
+.square-check
+{
+
+}
+
+.blank-radio:not(:disabled)
+{
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url("../pic/icons.png") no-repeat -40px -40px;
+}
+.blank-radio:not(:disabled):hover
+{
+    background: url("../pic/icons.png") no-repeat -62px -40px;
+}
+.blank-radio:not(:disabled):checked
+{
+    background: url("../pic/icons.png") no-repeat -84px -40px;
+}
+.blank-radio:disabled
+{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d7d7d7;
     border-radius: 6px;
+    background: url("../pic/icons.png") no-repeat -106px -40px;
 }
-input[type="radio"]:hover
+.normal-radio:not(:disabled)
 {
-    border-color: #3668b0;
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url("../pic/icons.png") no-repeat -128px -40px;
 }
-input[type="radio"]:active
+.normal-radio:not(:disabled):hover
 {
-    background-color: #e2e9f4;
+    background: url("../pic/icons.png") no-repeat -150px -40px;
 }
-input[type="radio"]:checked
+.normal-radio:not(:disabled):checked
 {
-    box-shadow: inset 0.5px 0.8px 1px 2px #e2e9f4;       /**********机z智如我，hack画法画radio选中样式*************/
-    background-color: #3668b0;
-    border-color: #3668b0;
+    background: url("../pic/icons.png") no-repeat -172px -40px;
 }
-input[type="radio"]:disabled
+.normal-radio:disabled
 {
-    border-color: #d7d7d7;
-    box-shadow: inset 0.5px 0.8px 1px 2px #f1f1f1;
-    background-color: #d5d5d5;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    background: url("../pic/icons.png") no-repeat -195px -41px;
 }
 .expansion,.collapse
 {
@@ -209,80 +293,92 @@ input[type="radio"]:disabled
 
 
 /****************DEFINE YOUR TEXT INPUT************************/
-
-input[type="text"]:not(.input-error):not(.input-warning),select
+.normal-input
 {
     width: 198px;
     height: 22px;
     border: 1px solid #b5b5b5;
 }
-input[type="text"]:not(.input-error):not(.input-warning):not(.input-correct):hover
+.normal-input:not(:disabled):hover
 {
     border-color: #d4b259;
 }
-input[type="text"]:not(.input-error):not(.input-warning):disabled
+.normal-input:disabled
 {
-    border-color: #d7d7d7;
+    border :1px solid #d7d7d7;
     background-color: #f1f1f1;
 }
 .icon-input-correct,.icon-input-error,.icon-input-warning
 {
-    margin: 5px 0;
+    height: 22px;
+}
+.input-correct,.input-error,.input-warning
+{
     width: 198px;
     height: 22px;
+}
+.input-correct
+{
     border-color: #d7d7d7;
-    margin-right: 14px;
 }
-.message-icon
-{
-    width: 14px;
-    height: 14px;
-    margin-right: 8px;
-    background: url("../pic/s-icons.png") no-repeat;
-    background-position: -13px -125px;
-    position: relative;
-    top:-20px;
-    left: 214px;
-}
-.icon-input-error .message-text
-{
-    position: relative;
-    color: #ee5f57;
-    left: 236px;
-    top: -36px;
-    font-size: 14px;
-}
-.icon-input-warning .message-text
-{
-    position: relative;
-    color: #d4b259;
-    left: 236px;
-    top: -36px;
-    font-size:14px;
-}
-
 .input-error
 {
-    width: 198px;
-    height: 22px;
     color: #ee5f57;
     border-color: #ee5f57;
-    margin-right: 14px;
 }
 .input-warning
 {
-    width: 198px;
-    height: 22px;
     border-color: #d4b259;
     color: #d4b259;
 }
-
+.message-icon
+{
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    position: relative;
+    top:-24px;
+    left: 214px;
+    background: url("../pic/icons.png") no-repeat;
+}
+.icon-input-correct .message-icon
+{
+    background-position: -40px -110px;
+}
+.icon-input-error .message-icon
+{
+    background-position: -66px -111px;
+}
+.icon-input-warning .message-icon
+{
+    background-position: -92px -111px;
+}
+.message-text
+{
+    position: relative;
+    top: -41px;
+    left: 239px;
+}
+.icon-input-error .message-text
+{
+    color:  #ee5f57;
+    font-size:15px;
+}
+.icon-input-warning .message-text
+{
+    color:#d4b259;
+    font-size: 15px;
+}
 
 /**********SELECTOR**************/
+form
+{
+    clear: both;
+}
 .select-wrap,.dis-select-wrap
 {
     width: 198px;
-    height: 24px;
+    height: 22px;
     border: 1px solid #d7d7d7;
 }
 
@@ -290,15 +386,14 @@ input[type="text"]:not(.input-error):not(.input-warning):disabled
 {
     float: left;
     width: 178px;
-    height: 24px;
+    height: 22px;
     border: transparent;
-    outline: medium;
 }
 .drop-down,.dis-drop-down
 {
     width: 20px;
     height: 20px;
-    margin: 2px 1px;
+    margin: 1px 1px;
     position: relative;
     left: 176px;
 }
@@ -312,7 +407,7 @@ input[type="text"]:not(.input-error):not(.input-warning):disabled
     border-right-color: transparent;
     position: absolute;
     top: 8.5px;
-    left: 7.5px;
+    left: 7px;
 }
 .option-wrap
 {
@@ -344,48 +439,56 @@ dd p
 {
     background-color: #d7d7d7;
 }
-.dis-select-simulate
+.select-simulate:disabled
 {
     background-color: #d7d7d7;
     color: #d2d2d2;
 }
 /**********SEARCH INPUT********************/
-.ui-icon-input
+.search,.calendar
 {
-    width:198px;
-    height: 22px;
-    border: 1px solid #C5C5C5;
-    margin: 2px 0;
+    display: inline-block;
 }
-.ui-icon-input:hover
+.search-input,.calendar-input
+{
+    float: left;
+    width: 198px;
+    height: 22px;
+    border: 1px solid #b5b5b5;
+}
+.search-input:hover
 {
     border-color: #d4b259;
 }
-input[type="search"]
+.search-input:disabled
+{
+    border-color: #d7d7d7;
+    background-color: #F1F1F1;
+}
+.search-icon,.calendar-icon
 {
     float: left;
-    width: 176px;
-    height: 22px;
-    border: none ;
+    width: 18px;
+    height: 18px;
+    background: url("../pic/icons.png");
+    position: relative;
+    left: -20px;
+    top: 2px;
 }
 .search-icon
 {
-    width: 22px;
+    background-position: -44px -140px;
+}
+.calendar-icon
+{
+    background-position: -40px -59px;
+}
+input[type="calendar"]
+{
+    float: left;
+    width: 198px;
     height: 22px;
-    position: relative;
-    left: 178px;
-    z-index: -1;
-    background: url("../pic/s-icons.png");
-    background-position: -345px -233px;
-}
-.ui-icon-input:hover
-{
-    border-color: #d4b259;
-}
-.ui-icon-input:disabled
-{
-    border-color: #d7d7d7;
-    background: #f1f1f1;
+    border: 1px solid #b5b5b5;
 }
 /********FLOAT WINDOW**********/
 .float-window
@@ -402,8 +505,7 @@ input[type="search"]
     margin: 24px 17px 24px 29px;
     width: 38px;
     height: 38px;
-    background: url("../pic/s-icons.png") no-repeat;
-    background-position: 0 -112px;
+    background: url("../pic/s-icons.png") no-repeat 0 -112px;
 }
 .float-text
 {
