@@ -15,12 +15,15 @@ audio,video,button,select,option,input
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 50%;
+    font-size: 70%;
     font: inherit;
     vertical-align: baseline;
     background-color: transparent;
     outline: none;
-    vertical-align: baseline;
+    vertical-align:text-bottom;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 body
 {
@@ -124,9 +127,9 @@ change the stylesheet to suit your need
 /**********INPUT CLEAR**************/
 input,select
 {
-    appearance:none;                   /**ie*/
-    -moz-appearance: none;            /*firefox*/
-    -webkit-appearance:none;         /*chrome & safari*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     overflow: hidden;                  /*hidde the triangle*/
     outline: none;
     padding: 0px;
@@ -162,6 +165,7 @@ input[type="submit"]:disabled
     background-color: #FFFFFF;
 }
 /************DEFINE YOUR CHECKBOX & RADIO****************/
+
 .blank-check:not(:disabled)
 {
     width: 12px;
@@ -211,11 +215,34 @@ input[type="submit"]:disabled
 
 }
 
-.blank-radio:not(:disabled)
+.blank-radio,.emp-radio
 {
     width: 12px;
     height: 12px;
     border: none;
+}
+.emp-radio:not(:disabled)
+{
+    background: url("../pic/icons.png") no-repeat -40px -40px;
+}
+.emp-radio:not(:disabled):hover
+{
+    background: url("../pic/icons.png") no-repeat -62px -40px;
+}
+.emp-radio:not(:disabled):checked
+{
+    background: url("../pic/icons.png") no-repeat -84px -40px;
+}
+.emp-radio:disabled
+{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+    background: url("../pic/icons.png") no-repeat -106px -40px;
+}
+.blank-radio:not(:disabled)
+{
     background: url("../pic/icons.png") no-repeat -40px -40px;
 }
 .blank-radio:not(:disabled):hover
