@@ -1,0 +1,12 @@
+css 直接改变给定背景图片样式（比如颜色，放缩）？不能，css无事件。
+
+
+去除input框等的原有样式该怎么做？appearance/-moz-appearance/-webkit-appearance？(我用到了，但是比如type属性为time/date/search（搜索款后面的叉叉）都还含有原来的样式，比如只有chrome下input生效)
+
+
+
+input[type="search"]
+
+disabled属性
+
+雪碧图

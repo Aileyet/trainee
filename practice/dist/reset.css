@@ -165,7 +165,11 @@ input[type="submit"]:disabled
     background-color: #FFFFFF;
 }
 /************DEFINE YOUR CHECKBOX & RADIO****************/
-
+input[type="checkbox"]
+{
+    opacity: 0 !important;
+    z-index: -1;
+}
 .blank-check:not(:disabled)
 {
     width: 12px;
