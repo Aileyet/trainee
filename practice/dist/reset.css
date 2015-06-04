@@ -127,7 +127,7 @@ change the stylesheet to suit your need
 /**********INPUT CLEAR**************/
 input,select
 {
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     overflow: hidden;                  /*hidde the triangle*/
@@ -165,11 +165,19 @@ input[type="submit"]:disabled
     background-color: #FFFFFF;
 }
 /************DEFINE YOUR CHECKBOX & RADIO****************/
-input[type="checkbox"]
-{
-    opacity: 0 !important;
-    z-index: -1;
+
+input[type="checkbox"] + label:before {
+    background:url("../pic/icons.png") no-repeat -100px -40px;
+    content:"";
+    height: 25px;
+    width: 25px;
+    padding: 0 8px;
+    position: relative;
+    left: -14px;
+    top: 1px;
 }
+
+/*
 .blank-check:not(:disabled)
 {
     width: 12px;
@@ -214,11 +222,28 @@ input[type="checkbox"]
     border:1px solid #d7d7d7;
     background-color: #f1f1f1;
 }
-.square-check
+.square-check:not(:disabled)
 {
-
+    width: 12px;
+    height: 12px;
+    border: none;
+    background: url("../pic/icons.png") no-repeat  -392px -40px;
 }
-
+.square-check:not(:disabled):hover
+{
+    background: url("../pic/icons.png") no-repeat -414px -40px;
+}
+.square-check:not(:disabled):checked
+{
+    background: url("../pic/icons.png") no-repeat -436px -40px;
+}
+.square-check:disabled
+{
+    width: 12px;
+    height: 12px;
+    border:1px solid #d7d7d7;
+    background: url("../pic/icons.png") no-repeat -459px -41px;
+}
 .blank-radio,.emp-radio
 {
     width: 12px;
@@ -321,8 +346,7 @@ input[type="checkbox"]
     left: 2px;
     top: -15px;
 }
-
-
+*/
 /****************DEFINE YOUR TEXT INPUT************************/
 .normal-input
 {
@@ -480,6 +504,10 @@ dd p
 {
     display: inline-block;
 }
+.search-input::-moz-placeholder
+{
+    color:transparent;
+}
 .search-input,.calendar-input
 {
     float: left;
@@ -521,6 +549,7 @@ input[type="calendar"]
     height: 22px;
     border: 1px solid #b5b5b5;
 }
+
 /********FLOAT WINDOW**********/
 .float-window
 {
@@ -536,7 +565,7 @@ input[type="calendar"]
     margin: 24px 17px 24px 29px;
     width: 38px;
     height: 38px;
-    background: url("../pic/s-icons.png") no-repeat 0 -112px;
+    background: url("../pic/icons.png") no-repeat 0 -112px;
 }
 .float-text
 {

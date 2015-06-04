@@ -23,12 +23,18 @@
 
 
     <h3>checkbox</h3>
-    <input type="checkbox" class="blank-check">
-    <input type="checkbox" class="blank-check" disabled="disabled">
-    <input type="checkbox" class="hook-check">
-    <input type="checkbox" class="hook-check" disabled="disabled">
-    <input type="checkbox" class="square-check"><span></span>
-    <input type="checkbox" class="square-check" disabled="disabled">
+    <div class="blank-check">
+        <input type="checkbox" id="blank"><label for="blank"></label>
+    </div>
+    <!--input type="checkbox" class="blank-check" disabled="disabled"-->
+    <div class="hook-check">
+        <input type="checkbox" id="hook"><label for="hook"></label>
+    </div>
+    <!--input type="checkbox" class="hook-check" disabled="disabled"-->
+    <div class="aquare-check">
+        <input type="checkbox" id="square"><label for="square"></label>
+    </div>
+    <!--input type="checkbox" class="square-check" disabled="disabled"-->
     <h3>radio</h3>
     <input type="radio" class="emp-radio">
     <input type="radio" class="emp-radio" checked="checked">
@@ -119,10 +125,7 @@
 <h3>float window</h3>
     <div class="float-window">
         <div class="float-icon">
-            <svg width="38px" height="38px" >
-                <circle r="17" cx="19" cy="19" fill="#00cd00" stroke="#00edbb" stroke-width="2px"/>
-                <path d="M8 20 L17 28 L29 10" style="fill: #00cd00; stroke: white;stroke-width: 2px "/>
-            </svg>
+
         </div>
         <div class="float-text">通道名称已同步!</div>
     </div>
