@@ -47,47 +47,47 @@ change the stylesheet to suit your need
 *********************/
 
 /**********button***********/
-.red-button,.gray-button
+.btn-red,.btn-gray
 {
     width: 90px;
     height: 30px;
     border-radius: 2px;
 }
-.red-button
+.btn-red
 {
     background: #ff4848;
     color: #ffffff;
 }
-.red-button:hover
+.btn-red:hover
 {
     background: #eb4141;
 }
-.red-button:active
+.btn-red:active
 {
     background: #e12e2e;
 }
-.red-button:disabled
+.btn-red:disabled
 {
     background: #ff9595;
 }
-.gray-button
+.btn-gray
 {
     background: #cacaca;
     color: #4e4e4e;
 }
-.gray-button:hover
+.btn-gray:hover
 {
     background: #bebebe;
 }
-.gray-button:active
+.btn-gray:active
 {
     background:#AAAAAA;
 }
-.gray-button:disabled
+.btn-gray:disabled
 {
     background: #dfdfdf;
 }
-.set-button
+.btn-set
 {
     height: 25px;
     display: inline-block;
@@ -98,29 +98,29 @@ change the stylesheet to suit your need
     color: #3b3b3b;
     background-color: #f6f6f6;
 }
-.set-button:hover
+.btn-set:hover
 {
     border-color: #cdcdcd;
     background-color: #eeeeee;
 }
-.set-button:active
+.btn-set:active
 {
     border-color: #bfbfbf;
     background-color: #e9e9e9;
 }
-.set-button:disabled
+.btn-set:disabled
 {
     border-color: #e0dddd;
     background-color: #f6f6f6;
     color: #878787;
 }
-.set-button i
+.btn-set i
 {
     padding: 2px 8px;
     margin: 5px 0px 5px 12px;
     background: url("../pic/icons.png") -118px -110px;
 }
-.set-button .mes
+.btn-set .mes
 {
     margin: 0px 12px 0px 8px;
 }
@@ -165,9 +165,63 @@ input[type="submit"]:disabled
     background-color: #FFFFFF;
 }
 /************DEFINE YOUR CHECKBOX & RADIO****************/
+input[type="checkbox"]
+{
+    opacity: 0 !important;
+    position: relative;
+    left:13px;
+    top: 0px;
+}
+input[class="check"] + span
+{
+    background:#d5d5d5;
+    content:"";
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    background:url("../pic/icons.png") no-repeat -215px -40px;
+}
+input[class="check"]:hover + span
+{
+    background:url("../pic/icons.png") no-repeat -237px -40px;
+}
+input[class="check"]:checked + span
+{
+    background:url("../pic/icons.png") no-repeat -347px -40px;
+}
+input[class="check"]:disabled + span
+{
+    background:url("../pic/icons.png") no-repeat -369px -40px;
+}
 
-input[type="checkbox"] + label:before {
-    background:url("../pic/icons.png") no-repeat -100px -40px;
+input[class="check-some"] + span
+{
+    background:#d5d5d5;
+    content:"";
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    background:url("../pic/icons.png") no-repeat -391px -40px;
+}
+input[class="check-some"]:hover + span
+{
+    background:url("../pic/icons.png") no-repeat -413px -40px;
+}
+input[class="check-some"]:checked + span
+{
+    background:url("../pic/icons.png") no-repeat -435px -40px;
+}
+input[class="check-some"]:disabled + span
+{
+    background:url("../pic/icons.png") no-repeat -457px -40px;
+}
+
+input[type="radio"]
+{
+    opacity: 0 !important;
+}
+input[type="radio"] + span {
+    background:url("../pic/icons.png") no-repeat -40px -40px;
     content:"";
     height: 25px;
     width: 25px;
@@ -176,177 +230,58 @@ input[type="checkbox"] + label:before {
     left: -14px;
     top: 1px;
 }
+input[type="radio"]:hover + span
+{
+    background:url("../pic/icons.png") no-repeat -62px -40px;
+}
+input[type="radio"]:checked + span
+{
+    background:url("../pic/icons.png") no-repeat -172px -40px;
+}
+input[type="radio"]:disabled + span
+{
+    background:url("../pic/icons.png") no-repeat -194px -40px;
+}
 
-/*
-.blank-check:not(:disabled)
-{
-    width: 12px;
-    height: 12px;
-    border: none;
-    background: url("../pic/icons.png") no-repeat  -216px -40px;
-}
-.blank-check:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -238px -40px;
-}
-.blank-check:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -260px -40px;
-}
-.blank-check:disabled
-{
-    width: 12px;
-    height: 12px;
-    border:1px solid #d7d7d7;
-    background-color: #f1f1f1;
-}
-.hook-check:not(:disabled)
-{
-    width: 12px;
-    height: 12px;
-    border: none;
-    background: url("../pic/icons.png") no-repeat -304px -40px;
-}
-.hook-check:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -326px -40px;
-}
-.hook-check:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -348px -40px;
-}
-.hook-check:disabled
-{
-    width: 12px;
-    height: 12px;
-    border:1px solid #d7d7d7;
-    background-color: #f1f1f1;
-}
-.square-check:not(:disabled)
-{
-    width: 12px;
-    height: 12px;
-    border: none;
-    background: url("../pic/icons.png") no-repeat  -392px -40px;
-}
-.square-check:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -414px -40px;
-}
-.square-check:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -436px -40px;
-}
-.square-check:disabled
-{
-    width: 12px;
-    height: 12px;
-    border:1px solid #d7d7d7;
-    background: url("../pic/icons.png") no-repeat -459px -41px;
-}
-.blank-radio,.emp-radio
-{
-    width: 12px;
-    height: 12px;
-    border: none;
-}
-.emp-radio:not(:disabled)
-{
-    background: url("../pic/icons.png") no-repeat -40px -40px;
-}
-.emp-radio:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -62px -40px;
-}
-.emp-radio:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -84px -40px;
-}
-.emp-radio:disabled
-{
-    width: 12px;
-    height: 12px;
-    border: 1px solid #d7d7d7;
-    border-radius: 6px;
-    background: url("../pic/icons.png") no-repeat -106px -40px;
-}
-.blank-radio:not(:disabled)
-{
-    background: url("../pic/icons.png") no-repeat -40px -40px;
-}
-.blank-radio:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -62px -40px;
-}
-.blank-radio:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -84px -40px;
-}
-.blank-radio:disabled
-{
-    width: 12px;
-    height: 12px;
-    border: 1px solid #d7d7d7;
-    border-radius: 6px;
-    background: url("../pic/icons.png") no-repeat -106px -40px;
-}
-.normal-radio:not(:disabled)
-{
-    width: 12px;
-    height: 12px;
-    border: none;
-    background: url("../pic/icons.png") no-repeat -128px -40px;
-}
-.normal-radio:not(:disabled):hover
-{
-    background: url("../pic/icons.png") no-repeat -150px -40px;
-}
-.normal-radio:not(:disabled):checked
-{
-    background: url("../pic/icons.png") no-repeat -172px -40px;
-}
-.normal-radio:disabled
-{
-    width: 12px;
-    height: 12px;
-    border: 1px solid #d7d7d7;
-    border-radius: 6px;
-    background: url("../pic/icons.png") no-repeat -195px -41px;
-}
-.expansion,.collapse
-{
-    float:left;
-    width:9px;
-    height:9px;
-    border: 1px solid #b5b5b5;
-    margin: 2px 5px;
-}
-.plus-icon,.minus-icon
-{
-    width: 5px;
-    height: 5px;
-    margin: 2px;
-}
-.collapse:hover,.expansion:hover
-{
-    background-color: #b5b5b5;
-    color: #ffffff;
-}
-.collapse hr,.expansion hr
-{
+/*expands*/
+input[class="plus"] + span {
+    background:url("../pic/icons.png") no-repeat -38px -170px;
+    content:"";
+    height: 25px;
+    width: 25px;
+    padding: 0 8px;
     position: relative;
-    top: -4px;
+    left: -14px;
+    top: 1px;
 }
-.vertical-line
+input[class="plus"]:hover + span
 {
-    width: 1px;
-    height: 5px;
-    background-color: #d5d5d5;
-    position: relative;
-    left: 2px;
-    top: -15px;
+    background:url("../pic/icons.png") no-repeat -80px -170px;
 }
-*/
+input[class="plus"]:disabled + span
+{
+    background:url("../pic/icons.png") no-repeat -60px -170px;
+}
+
+input[class="muni"] + span {
+    background:url("../pic/icons.png") no-repeat -122px -170px;
+    content:"";
+    height: 25px;
+    width: 25px;
+    padding: 0 8px;
+    position: relative;
+    left: -14px;
+    top: 1px;
+}
+input[class="muni"]:hover + span
+{
+    background:url("../pic/icons.png") no-repeat -164px -170px;
+}
+input[class="muni"]:disabled + span
+{
+    background:url("../pic/icons.png") no-repeat -144px -170px;
+}
+
 /****************DEFINE YOUR TEXT INPUT************************/
 .normal-input
 {
@@ -432,8 +367,8 @@ form
 }
 .select-wrap,.dis-select-wrap
 {
-    width: 198px;
-    height: 22px;
+    width: 200px;
+    height: 24px;
     border: 1px solid #d7d7d7;
 }
 
@@ -441,7 +376,7 @@ form
 {
     float: left;
     width: 178px;
-    height: 22px;
+    height: 24px;
     border: transparent;
 }
 .drop-down,.dis-drop-down
@@ -466,7 +401,7 @@ form
 }
 .option-wrap
 {
-    width: 198px;
+    width: 200px;
     min-height:198px;
     border: 1px solid #C5C5C5;
     border-top-style: hidden;
@@ -565,7 +500,7 @@ input[type="calendar"]
     margin: 24px 17px 24px 29px;
     width: 38px;
     height: 38px;
-    background: url("../pic/icons.png") no-repeat 0 -112px;
+    background: url("../pic/icons.png") no-repeat -128px -195px;
 }
 .float-text
 {

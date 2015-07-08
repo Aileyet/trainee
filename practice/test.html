@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="IE=8">
+    <!--meta http-equiv="x-ua-compatible" content="IE=8"-->
+
+
     <title>test the reset-css</title>
     <link rel="stylesheet" href="dist/reset.css">
     <script src="dist/jquery-2.1.4.min.js"></script>
@@ -12,38 +14,40 @@
     <input type="submit" value="配置">
     <input type="submit" disabled="disabled" value="配置">
     <h3>button</h3>
-    <button class="red-button">保存</button>
-    <button class="gray-button">取消</button>
+    <button class="btn-red">保存</button>
+    <button class="btn-gray">取消</button>
     <h3>disabled button</h3>
-    <button class="red-button" disabled="disabled">保存</button>
-    <button class="gray-button" disabled="disabled">取消</button>
+    <button class="btn-red" disabled="disabled">保存</button>
+    <button class="btn-gray" disabled="disabled">取消</button>
     <h3>set-button</h3>
-    <button class="set-button"><i></i><span class="mes">Configuration</span></button>
-    <button class="set-button" disabled="disabled"><i></i><span class="mes">Configuration</span></button>
+    <button class="btn-set"><span class="mes">Configuration</span></button>
+    <button class="btn-set" disabled="disabled"><i></i><span class="mes">Configuration</span></button>
 
 
     <h3>checkbox</h3>
-    <div class="blank-check">
-        <input type="checkbox" id="blank"><label for="blank"></label>
-    </div>
-    <!--input type="checkbox" class="blank-check" disabled="disabled"-->
-    <div class="hook-check">
-        <input type="checkbox" id="hook"><label for="hook"></label>
-    </div>
-    <!--input type="checkbox" class="hook-check" disabled="disabled"-->
-    <div class="aquare-check">
-        <input type="checkbox" id="square"><label for="square"></label>
-    </div>
-    <!--input type="checkbox" class="square-check" disabled="disabled"-->
+        <label><input type="checkbox" class="check"/><span></span></label>
+        <label><input type="checkbox" class="check" disabled="disabled"/><span></span></label>
+
+        <label><input type="checkbox" class="check-some"/><span></span></label>
+        <label><input type="checkbox" class="check-some" disabled="disabled"/><span></span></label>
+
+
     <h3>radio</h3>
-    <input type="radio" class="emp-radio">
-    <input type="radio" class="emp-radio" checked="checked">
-    <input type="radio" class="emp-radio" disabled="disabled">
-    <input type="radio" class="normal-radio">
-    <input type="radio" class="normal-radio" checked="checked">
-    <input type="radio" class="normal-radio" disabled="disabled">
+        <label class="radio"><input type="radio"/><span></span></label>
+        <label class="radio"><input type="radio" disabled="disabled"/><span></span></label>
+
+
     <h3>expands</h3>
 
+    <div class="plus-icon">
+        <label><input type="checkbox" class="plus"/><span></span></label>
+        <label><input type="checkbox" class="plus" disabled="disabled"/><span></span></label>
+
+    </div>
+    <div class="muni-icon">
+        <label><input type="checkbox" class="muni"/><span></span></label>
+        <label><input type="checkbox" class="muni" disabled="disabled"/><span></span></label>
+    </div>
 
 
     <h3>normal input</h3>
@@ -70,17 +74,7 @@
     <div class="calendar">
         <input type="text" class="calendar-input"><span class="calendar-icon"></span>
     </div>
-    <!--div type="color" class="collapse" aria-disabled="true">
-        <div class="plus-icon">
-            <hr size="1" color="#d5d5d5">
-            <div class="vertical-line"></div>
-        </div>
-    </div>
-    <div type="color" class="expansion">
-        <div class="minus-icon">
-            <hr size="1" color="#d5d5d5">
-        </div>
-    </div-->
+
 
     <script>
         $(document).ready(function(){
@@ -124,14 +118,9 @@
 
 <h3>float window</h3>
     <div class="float-window">
-        <div class="float-icon">
-
-        </div>
+        <div class="float-icon"></div>
         <div class="float-text">通道名称已同步!</div>
     </div>
-<div class="sradio" style="width:20px;height:20px;border-radius:10px;border:1px solid blue;">
-    <span class="nradio" style="width:14px;height:14px;border-radius:7px;background: blue;margin-left:2px;margin-top:2px;display:block;"></span>
-</div>
 <script></script>
 </body>
 </html>

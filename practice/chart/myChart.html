@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>myChart</title>
+    <link rel="stylesheet" href="myChart.css">
+</head>
+    <div id="myChart" class="chart"></div>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.drawDoughnutChart.js"></script>
+    <script>
+        $(function(){
+            $("#myChart").drawDoughnutChart([
+                { title: "Tokyo", value :100, color: "#e25549"},
+                { title: "New York", value: 50, color: "#55ee99"},
+                { title: "Paris", value:75, color: "#aa2eff"},
+            ]);
+        });
+    </script>
+<body>
+
+</body>
+</html>
